@@ -67,7 +67,7 @@ int main() {
 
 	string word = "PLANE";
 
-	cout << "Write youre first guess (only 5 letters) " << endl;
+	cout << "Write your first guess (only 5 letters) " << endl;
 
 	string user_word;
 
