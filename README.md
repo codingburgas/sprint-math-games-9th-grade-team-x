@@ -1,5 +1,5 @@
 # Team "X"
-![team logo](team-logo.jpg)
+![team logo](icons/team-logo.jpg)
   
 ## Table of contents
 * [Project description](#description)<br>
@@ -20,10 +20,10 @@ A game where you get three, five or eight attempts (depending on the mode you ch
 
 ## Technologies used <a name="technologies"></a>
 ### Writing code & commiting
-![visual studio](visualStudio.png)
-![github](github.png)
-![git](git-logo.png)
+![visual studio](icons/visualStudio.png)
+![github](icons/github.png)
+![git](icons/git-logo.png)
 ### Apps used for documentation, presentation & communication:
-![word](wordIcon.png)
-![powerpoint](powerPointIcon.png)
-![teams](teamsIcon.png)
+![word](icons/wordIcon.png)
+![powerpoint](icons/powerPointIcon.png)
+![teams](icons/teamsIcon.png)
