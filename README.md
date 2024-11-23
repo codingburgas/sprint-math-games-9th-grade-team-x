@@ -1,6 +1,6 @@
-<h1 align = center> Team "X" <h1>
-<div align="center"> <img src="team-logo.jpg" alt="team logo" /> </div>
-
+# Team "X"
+![team logo](team-logo.png)
+  
 ## Table of contents
 * [Project description](#description)<br>
 * [Team members](#teamMembers)<br>
