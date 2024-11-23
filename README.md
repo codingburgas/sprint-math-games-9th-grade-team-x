@@ -20,10 +20,10 @@ A game where you get three, five or eight attempts (depending on the mode you ch
 
 ## Technologies used <a name="technologies"></a>
 ### Writing code & commiting
-<a href="https://visualstudio.com/"><img src="visualStudio.png" alt="Visual Studio" width="68"/></a>
-<a href="https://github.com/"><img src="github.png" alt="GitHub Icon" width="56"/></a>
-<a href="https://git-scm.com/"><img src="git-logo.png" alt="Git" width="55"/></a>
+![visual studio](visualStudio.png)
+![github](github.png)
+![git](git-logo.png)
 ### Apps used for documentation, presentation & communication:
-<a href="https://www.microsoft.com/en-us/microsoft-365/word?msockid=2e0aaed6218768a7173cba0c202169df"><img src="wordIcon.png" alt="Word" width="47"/></a>
-<a href="https://www.microsoft.com/en-us/microsoft-365/powerpoint?msockid=2e0aaed6218768a7173cba0c202169df"><img src="powerPointIcon.png" alt="PowerPoint" width="47"/></a>
-<a href="https://www.microsoft.com/en-us/microsoft-teams/log-in?msockid=2e0aaed6218768a7173cba0c202169df"><img src="teamsIcon.png" alt="Teams" width="52"/></a>
+![word](wordIcon.png)
+![powerpoint](powerPointIcon.png)
+![teams](teamsIcon.png)
