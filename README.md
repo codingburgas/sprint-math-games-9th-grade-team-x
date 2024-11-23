@@ -20,7 +20,7 @@ A game where you get three, five or eight attempts (depending on the mode you ch
 
 ## Technologies used <a name="technologies"></a>
 ### Writing code & commiting
-<a href="https://visualstudio.com/"><img src="visualstudio.png" alt="Visual Studio" width="68"/></a>
+<a href="https://visualstudio.com/"><img src="visualStudio.png" alt="Visual Studio" width="68"/></a>
 <a href="https://github.com/"><img src="github.png" alt="GitHub Icon" width="56"/></a>
 <a href="https://git-scm.com/"><img src="git-logo.png" alt="Git" width="55"/></a>
 ### Apps used for documentation, presentation & communication:
