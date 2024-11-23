@@ -1,5 +1,5 @@
 # Team "X"
-![team logo](team-logo.png)
+![team logo](team-logo.jpg)
   
 ## Table of contents
 * [Project description](#description)<br>
