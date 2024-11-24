@@ -1,33 +1,18 @@
 ﻿#include <iostream> 
 #include <string> 
-#include <algorithm> //to change the appearence of the text
-#include <iomanip>
+#include <algorithm> //change the appearance of the text
+#include <iomanip> //defines the functions that are used to manipulate the format of the input and output of our program
 
 using namespace std;
 
 //escape code 
-const string RESET = "\033[0m";
-const string GREEN = "\033[32m";
-const string YELLOW = "\033[33m";
-const string RED = "\033[31m";
-const string CLEAR_LINE = "\033[F\033[K";
+const string RESET = "\033[0m"; // return the default console color
+const string GREEN = "\033[32m"; // changes the text color to green
+const string YELLOW = "\033[33m"; // changes the text color to yellow
+const string RED = "\033[31m";  // changes the text color to red
+const string CLEAR_LINE = "\033[F\033[K"; // clears the line and returns the cursor to the beginning of the line
 
-string randomWords() {
-
-	srand(time(0));
-	int num = rand() % 20;
-
-
-	string array[20] = { "BRAIN" , "BRICK" , "TABLE" , "PLANT" , "BEACH" , "BROWN" , "HOUSE" , "SNAKE" , "OCEAN" , "MUSIC" , "DREAM" , "SUGAR" ,"LIGHT" , "PARTY" , "BREAD" , "SHINE" , "WATER" , "LEMON" , "CLOCK" , "TRAIN" };
-
-	return array[num];
-}
-
-
-void gamemenu() {
-	int menu_decider;
-
-	int back_menu;
+void icon() {
 
 	cout << setw(10) << "              .--------------.  .--------------.  .--------------.  .--------------.  .--------------.  .--------------." << endl;
 	cout << setw(10) << "              | _____  _____ |  |     ____     |  |  _______     |  |  ________    |  |   _____      |  |  _________   |" << endl;
@@ -39,6 +24,26 @@ void gamemenu() {
 	cout << setw(10) << "              |              |  |              |  |              |  |              |  |              |  |              |" << endl;
 	cout << setw(10) << "              '--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
 	cout << endl;
+}
+
+string randomWords() { 
+
+	srand(time(0)); // used to get a truly random number each time
+	int num = rand() % 20; // the variable num takes a random word from the ones we specified // rand() - a function that returns a random number
+
+
+	string array[20] = { "BRAIN" , "BRICK" , "TABLE" , "PLANT" , "BEACH" , "BROWN" , "HOUSE" , "SNAKE" , "OCEAN" , "MUSIC" , "DREAM" , "SUGAR" ,"LIGHT" , "PARTY" , "BREAD" , "SHINE" , "WATER" , "LEMON" , "CLOCK" , "TRAIN" };
+
+	return array[num]; // returns the index where the word (random) is located
+}
+
+
+void Secondgamemenu() {
+	int menu_decider; // variable for navigating through the menu
+
+	int back_menu; // second variable for navigating through the menu
+
+	icon();
 
 	cout << setw(10) << "                                                                      _______" << endl;
 	cout << setw(10) << "                                                    ___ _            |   _   |" << endl;
@@ -62,25 +67,21 @@ void gamemenu() {
 	cout << setw(10) << "                                                                    |_______|" << endl;
 
 
-
-
-
 	cout << endl;
 
 	cin >> menu_decider;
 
-	cout << system("cls");
+	cout << system("cls"); // completely clears the console
 
-	cout << CLEAR_LINE;
+	cout << CLEAR_LINE; // clears the line and moves the cursor to the beginning of the line
 
 
 
-	if (menu_decider == 1) {
+	if (menu_decider == 1) { // there is nothing inside the condition because the function ends and the game starts (that is in 'int main')
 
 	}
 
-	else if (menu_decider == 2) {
-
+	else if (menu_decider == 2) { // rules
 
 		cout << endl;
 
@@ -99,15 +100,15 @@ void gamemenu() {
 
 		cin >> back_menu;
 
-		if (back_menu == 1) {
+		if (back_menu == 1) { // if the condition is correct, we return to the main menu
 			cout << system("cls");
 			cout << CLEAR_LINE;
 
-			gamemenu();
+			Secondgamemenu();
 
 		}
 
-		else if (back_menu == 2) {
+		else if (back_menu == 2) { // if the condition is correct, the function ends and the game starts
 
 		}
 
@@ -116,12 +117,13 @@ void gamemenu() {
 
 	}
 
-	else if (menu_decider == 3) {
+	else if (menu_decider == 3) { // we exit the game completely
 
-		exit(0);
+		exit(0); // stops the console from running
 	}
 
-	else if (menu_decider != 1 || menu_decider != 2 || menu_decider != 3) {
+
+	else if (menu_decider != 1 && menu_decider != 2 && menu_decider != 3) {
 		cout << endl;
 
 		cout << RED << "SOMETHING WENT WRONG!" << RESET << endl;
@@ -135,7 +137,7 @@ int check_words(string user_word, string word) {
 	int count = 0;
 	for (int i = 0; i < 5; i++) {
 		int flag = 1;
-		if (user_word[i] == word[i]) {
+		if (user_word[i] == word[i]) { // i = 0, until the inner for loop runs five times (each time the g loop finishes its work, i++ is executed)
 			cout << GREEN;
 			cout << user_word[i] << " ";
 			cout << RESET;
@@ -168,12 +170,12 @@ int check_words(string user_word, string word) {
 
 int main() {
 
-	int mode_decide;
-	int mode_count = 5;
+	int mode_decide; // level selection
+	int mode_count = 5; // number of attempts (by default, there are five attempts)
 
-	string word = randomWords();
+	string word = randomWords(); // the variable word takes a value from another function as a random word
 
-	gamemenu();
+	Secondgamemenu(); // call the function that contains the main menu
 
 	cout << endl;
 	cout << "Decide what level do you want to play: " << endl;
@@ -194,19 +196,19 @@ int main() {
 
 
 
-	if (mode_decide == 1) {
+	if (mode_decide == 1) { // if the user selects number 1, they start at the easy level with 8 attempts
 		mode_count = 8;
 	}
 
-	else if (mode_decide == 2) {
+	else if (mode_decide == 2) { // if the user selects number 2, they start at the medium level with 5 attempts
 		mode_count = 5;
 	}
 
-	else if (mode_decide == 3) {
+	else if (mode_decide == 3) { // if the user selects number 3, they start at the hard level with 3 attempts
 		mode_count = 3;
 	}
 
-	else {
+	else { // if the user enters something other than 1, 2, or 3, they will default to starting at the medium level
 		cout << endl;
 
 		cout << "Something went wrong, but you can start with medium" << endl;
@@ -220,24 +222,29 @@ int main() {
 
 	string user_word;
 
-	for (int i = 0; i < mode_count; i++) {
+	for (int i = 0; i < mode_count; i++) { // as long as the user's attempts are not exhausted, they can keep guessing the word
 		cin >> user_word;
 
 		cout << CLEAR_LINE;
 
-		if (user_word.size() != 5) {
+		if (user_word.size() != 5) { // the condition checks that the word entered by the user consists of five letters
 			cout << endl;
 
 			cout << RED << "YOUR WORD MUST INVOLVE 5 LETTERS!" << RESET;
 
-			break;
+			break; // use break to stop the program from running
 		}
 
 
-		transform(user_word.begin(), user_word.end(), user_word.begin(), toupper);
+		transform(user_word.begin(), user_word.end(), user_word.begin(), toupper); // the first two arguments specify the range in which the letters should be changed, 
+        // and the last argument specifies where to start storing the transformed elements
+
+		// transform applies the given function to the range and stores the result in another range, 
+       // preserving the original order of elements and starting from user_word.begin()
 
 
-		if (check_words(user_word, word) == 5 && i < mode_count) {
+		if (check_words(user_word, word) == 5 && i < mode_count) { // if the user has typed 5 correct letters (green letters in the right positions) 
+                                                                   // and hasn't used all their attempts, they win
 			cout << endl;
 
 			cout << "YOU  WIN!" << endl;
@@ -276,7 +283,7 @@ int main() {
 			}
 		}
 
-		else if (i == mode_count - 1) {
+		else if (i == mode_count - 1) { // if i = modeCount - 1, the user loses (i starts from zero, so we need to subtract 1)
 
 			cout << endl;
 
@@ -301,7 +308,7 @@ int main() {
 				cout << system("cls");
 				cout << CLEAR_LINE;
 
-				main();
+				main(); // call main to restart the game (code) from the beginning
 			}
 
 			else if (want == "N" || want == "n") {
