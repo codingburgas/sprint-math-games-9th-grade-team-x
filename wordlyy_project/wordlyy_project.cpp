@@ -34,6 +34,8 @@ void gamemenu() {
 
 	int backMenu;
 
+	int AboutUs;
+
 	cout << setw(113) << ".--------------.  .--------------.  .--------------.  .--------------.  .--------------.  .--------------." << endl;
 	cout << setw(113) << "|  _____  ____ |  |     ____     |  |  _______     |  |  ________    |  |   _____      |  |  _________   |" << endl;
 	cout << setw(113) << "||_   _||_   _||  |   .'    `.   |  | |_   __ \\    |  | |_   ___ `.  |  |  |_   _|     |  | |_   ___  |  |" << endl;
@@ -45,28 +47,35 @@ void gamemenu() {
 	cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
 	cout << endl;
 
-	cout << setw(69) << "_______" << endl;
-	cout << setw(70) << "___ _            |   _   |" << endl;
-	cout << setw(70) << "| _ \\ |__ _ _  _  |  / |  |" << endl;
-	cout << setw(70) << "|  _/ / _` | || | |  | |  |" << endl;
-	cout << setw(70) << "|_| |_\\__,_|\\_, | |  |_|  |" << endl;
-	cout << setw(70) << "|__/  |_______|" << endl;
+	cout << setw(73) << "_______" << endl;
+	cout << setw(74) << "___ _            |   _   |" << endl;
+	cout << setw(74) << "| _ \\ |__ _ _  _  |  / |  |" << endl;
+	cout << setw(74) << "|  _/ / _` | || | |  | |  |" << endl;
+	cout << setw(74) << "|_| |_\\__,_|\\_, | |  |_|  |" << endl;
+	cout << setw(74) << "|__/  |_______|" << endl;
 
 
-	cout << setw(91) << "_______  " << endl;
-	cout << setw(90) << "___         _               _   _              |  ___  |" << endl;
-	cout << setw(90) << "|_ _|_ _  __| |_ _ _ _  _ __| |_(_)___ _ _  ___ | |_  ) |" << endl;
-	cout << setw(90) << "| || ' \\(_-<  _| '_| || / _|  _| / _ \\ ' \\(_-< |  / /  |" << endl;
-	cout << setw(90) << "|___|_||_/__/\\__|_|  \\_,_\\__|\\__|_\\___/_||_/__/ | /___| |" << endl;
-	cout << setw(90) << "|_______|" << endl;
+	cout << setw(89) << "_______  " << endl;
+	cout << setw(88) << "___         _               _   _              |  ___  |" << endl;
+	cout << setw(88) << "|_ _|_ _  __| |_ _ _ _  _ __| |_(_)___ _ _  ___ | |_  ) |" << endl;
+	cout << setw(88) << "| || ' \\(_-<  _| '_| || / _|  _| / _ \\ ' \\(_-< |  / /  |" << endl;
+	cout << setw(88) << "|___|_||_/__/\\__|_|  \\_,_\\__|\\__|_\\___/_||_/__/ | /___| |" << endl;
+	cout << setw(88) << "|_______|" << endl;
+
+	cout << setw(82) << "                                        _______" << endl;
+	cout << setw(83) << "    _   _              _     _   _     |  ____ |" << endl;
+	cout << setw(83) << "   /_\\ | |__  ___ _  _| |_  | | | |___ | |__ / |" << endl;
+	cout << setw(83) << "  / _ \\| '_ \\/ _ \\ || |  _| | |_| (_-< |  |_ \\ |" << endl;
+	cout << setw(83) << " /_/ \\_\\_.__/\\___/\\_,_|\\__|  \\___//__/ | |___/ |" << endl;
+	cout << setw(83) << "                                       |_______|" << endl;
 
 
-	cout << setw(69) << "_______" << endl;
-	cout << setw(70) << "___     _ _    |  ____ |" << endl;
-	cout << setw(70) << "| __|_ _(_) |_  | |__ / |" << endl;
-	cout << setw(70) << "| _|\\ \\ / |  _| |  |_ \\ |" << endl;
-	cout << setw(70) << "|___/_\\_\\_|\\__| | |___/ |" << endl;
-	cout << setw(70) << "|_______|" << endl;
+	cout << setw(72) << "                 ________" << endl;
+	cout << setw(73) << " ___     _ _    |  _ _   |" << endl;
+	cout << setw(73) << "| __|_ _(_) |_  | | | |_ |" << endl;
+	cout << setw(73) << "| _|\\ \\ / |  _| | |_  _| |" << endl;
+	cout << setw(73) << "|___/_\\_\\_|\\__| |   |_|  |" << endl;
+	cout << setw(73) << "                 |________|" << endl;
 
 
 	cin >> menuDecider;
@@ -75,7 +84,16 @@ void gamemenu() {
 
 	cout << CLEARLINE;
 
-	cout << RED << "W O R D L E" << RESET << endl;
+	cout << setw(113) << ".--------------.  .--------------.  .--------------.  .--------------.  .--------------.  .--------------." << endl;
+	cout << setw(113) << "|  _____  ____ |  |     ____     |  |  _______     |  |  ________    |  |   _____      |  |  _________   |" << endl;
+	cout << setw(113) << "||_   _||_   _||  |   .'    `.   |  | |_   __ \\    |  | |_   ___ `.  |  |  |_   _|     |  | |_   ___  |  |" << endl;
+	cout << setw(113) << "|  | | /\\ | |  |  |  /  .--.  \\  |  |   | |__) |   |  |   | |   `. \\ |  |    | |       |  |   | |_  \\_|  |" << endl;
+	cout << setw(113) << "|  | |/  \\| |  |  |  | |    | |  |  |   |  __ /    |  |   | |    | | |  |    | |   _   |  |   |  _|  _   |" << endl;
+	cout << setw(113) << "|  |   /\\   |  |  |  \\  `--'  /  |  |  _| |  \\ \\_  |  |  _| |___.' / |  |   _| |__/ |  |  |  _| |___/ |  |" << endl;
+	cout << setw(113) << "|  |__/  \\__|  |  |   `.____.'   |  | |____| |___| |  | |________.'  |  |  |________|  |  | |_________|  |" << endl;
+	cout << setw(113) << "|              |  |              |  |              |  |              |  |              |  |              |" << endl;
+	cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
+	cout << endl;
 
 	switch (menuDecider) {
 
@@ -87,19 +105,25 @@ void gamemenu() {
 	case 2:
 		cout << endl;
 
-		cout << "- Your word must be 5 letters. " << endl;
-		cout << "- Each difficulty gives you a different amount of attempts" << endl;
-		cout << "- If your input is invalid, then you will start with medium level. " << endl;
-		cout << "- If you use up your attempts, then you lose. " << endl;
+		cout << setw(75) << "- Your word must be 5 letters." << endl;
+		cout << setw(88) << "- Each difficulty gives you a different amount of attempts." << endl;
+		cout << setw(93) << "- If your input is invalid, then you will start with medium level." << endl;
+		cout << setw(85) << "- If you use up your attempts, then you lose." << endl;
+		cout << setw(89) << "- A green letter means it is correct and in the right spot." << endl;
+		cout << setw(90) << "- A yellow letter means it is correct but in the wrong spot." << endl;
 
 
-		cout << "|| Good luck! ||" << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
+		cout << endl;
 		cout << endl;
 
-		cout << "Press [1] to return to the menu" << endl;
+		cout << setw(75) << "Press [1] to return to the menu" << endl;
 		cout << endl;
 
-		cout << "Press [2] to continue playing" << endl;
+		cout << setw(74) << "Press [2] to continue playing" << endl;
 		cout << endl;
 
 		cin >> backMenu;
@@ -123,10 +147,44 @@ void gamemenu() {
 
 
 	case 3:
-		exit(0);
+
+		cout << endl;
+
+		cout << setw(64) << "About us" << endl;
+		
+		cout << endl;
+
+		cout << setw(75) << "Press [1] to return to the menu" << endl;
+		cout << endl;
+
+		cout << setw(74) << "Press [2] to continue playing" << endl;
+		cout << endl;
+
+		cin >> AboutUs;
+		cout << system("cls");
+		cout << CLEARLINE;
+
+		switch (AboutUs) {
+
+		case 1:
+			cout << system("cls");
+			cout << CLEARLINE;
+			gamemenu();
+
+
+		case 2:
+			cout << system("cls");
+			cout << CLEARLINE;
+		}
 		break;
+	    
+	case 4:
+		exit(0);
+
 
 	}
+	
+
 
 
 }
@@ -202,24 +260,24 @@ int main() {
 	gamemenu();
 
 	cout << endl;
-	cout << "Decide what level do you want to play: " << endl;
+	cout << setw(79) << "Decide what level do you want to play: " << endl;
 
 	cout << endl;
 
-	cout << "Press [ " << GREEN << "1" << RESET << " ] if you want to start with easy level" << endl;
-	cout << "Press [ " << YELLOW << "2" << RESET << " ] if you want to start with medium level" << endl;
-	cout << "Press [ " << RED << "3" << RESET << " ] if you want to start with hard level" << endl;
+	cout  << setw(43) << "Press [" << GREEN << "1" << RESET <<  setw(30) << "] if you want to start with easy level" << endl;
+	cout << setw(42) << "Press [" << YELLOW << "2" << RESET << setw(30) << "] if you want to start with medium level" << endl;
+	cout << setw(43) << "Press [" << RED << "3" << RESET << setw(30) <<  "] if you want to start with hard level" << endl;
 
 	cout << endl;
 	cout << endl;
 	cout << endl;
-	cout << "Press [4] if you want to return to the menu" << endl;
-	cout << "Press [5] to exit the game" << endl;
+	cout << setw(81) << "Press [4] if you want to return to the menu" << endl;
+	cout << setw(73) << "Press [5] to exit the game" << endl;
 
 
 
 
-	cin >> modeDecide;
+	cin  >> modeDecide;
 
 
 
@@ -303,8 +361,18 @@ int main() {
 
 
 	cout << endl;
+	cout << setw(113) << ".--------------.  .--------------.  .--------------.  .--------------.  .--------------.  .--------------." << endl;
+	cout << setw(113) << "|  _____  ____ |  |     ____     |  |  _______     |  |  ________    |  |   _____      |  |  _________   |" << endl;
+	cout << setw(113) << "||_   _||_   _||  |   .'    `.   |  | |_   __ \\    |  | |_   ___ `.  |  |  |_   _|     |  | |_   ___  |  |" << endl;
+	cout << setw(113) << "|  | | /\\ | |  |  |  /  .--.  \\  |  |   | |__) |   |  |   | |   `. \\ |  |    | |       |  |   | |_  \\_|  |" << endl;
+	cout << setw(113) << "|  | |/  \\| |  |  |  | |    | |  |  |   |  __ /    |  |   | |    | | |  |    | |   _   |  |   |  _|  _   |" << endl;
+	cout << setw(113) << "|  |   /\\   |  |  |  \\  `--'  /  |  |  _| |  \\ \\_  |  |  _| |___.' / |  |   _| |__/ |  |  |  _| |___/ |  |" << endl;
+	cout << setw(113) << "|  |__/  \\__|  |  |   `.____.'   |  | |____| |___| |  | |________.'  |  |  |________|  |  | |_________|  |" << endl;
+	cout << setw(113) << "|              |  |              |  |              |  |              |  |              |  |              |" << endl;
+	cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
+	cout << endl;
 
-	cout << "Write your first guess (only 5 letters) " << endl;
+	cout << setw(79) << "Write your first guess (only 5 letters) " << endl;
 
 
 
