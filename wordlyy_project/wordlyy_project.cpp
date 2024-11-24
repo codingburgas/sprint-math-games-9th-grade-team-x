@@ -108,10 +108,9 @@ void gamemenu() {
 
 int check_words(string user_word, string word) {
 	int count = 0;
+	int flag = 1;
 	for (int i = 0; i < 5; i++) {
-		int flag = 1;
-		if (user_word[i] == word[i])
-		{
+		if (user_word[i] == word[i]){
 			cout << GREEN;
 			cout << user_word[i] << " ";
 			cout << RESET;
@@ -119,8 +118,7 @@ int check_words(string user_word, string word) {
 			continue;
 		}
 		for (int g = 0; g < 5; g++) {
-			if (user_word[i] == word[g] && i != g)
-			{
+			if (user_word[i] == word[g] && i != g){
 				cout << YELLOW;
 				cout << user_word[i] << " ";
 				cout << RESET;
@@ -128,12 +126,12 @@ int check_words(string user_word, string word) {
 			}
 			break;
 		}
+		if (flag == 1){
+			cout << user_word[i] << " ";
+		}
 	}
-	if (flag)
-	{
-		cout << user_word[i] << " ";
-	}
-}
+	
+
 
 cout << endl;
 
