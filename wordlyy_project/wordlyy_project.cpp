@@ -1,6 +1,5 @@
 ﻿#include <iostream> 
 #include <string>
-#include <windows.h>  //library for colors
 #include <algorithm>
 #include <iomanip>
 
@@ -11,6 +10,19 @@ const string GREEN = "\033[32m";
 const string YELLOW = "\033[33m";
 const string RED = "\033[31m";
 const string CLEAR_LINE = "\033[F\033[K";
+
+string randomWords() {
+
+	srand(time(0)); 
+	int num = rand() % 20; 
+	
+
+	string array[20] = { "BRAIN" , "BRICK" , "TABLE" , "PLANT" , "BEACH" , "BROWN" , "HOUSE" , "SNAKE" , "OCEAN" , "MUSIC" , "DREAM" , "SUGAR" ,"LIGHT" , "PARTY" , "BREAD" , "SHINE" , "WATER" , "LEMON" , "CLOCK" , "TRAIN" };
+
+	return array[num];  
+}
+
+
 void gamemenu() {
 	int menu_decider;
 
@@ -55,7 +67,7 @@ void gamemenu() {
 
 	cout << CLEAR_LINE;
 
-	cout << RED << "W O R D L E" << RESET << endl;
+	
 
 	if (menu_decider == 1) {
 
@@ -96,61 +108,43 @@ void gamemenu() {
 
 int check_words(string user_word, string word) {
 	int count = 0;
-
-	int flag = 0;
-
-
 	for (int i = 0; i < 5; i++) {
-		for (int g = 0; g < 5; g++) {
-			if (user_word[i] == word[g]) {
-				if (i == g) { //i = 0, пока внутренний цикл for не проработает пять раз (каждый раз когда цикл g заканчивает свою работу i++)
-					cout << GREEN;
-					cout << user_word[i] << " ";
-					cout << RESET;
-
-					flag = 1;
-
-					count++;
-				}
-
-				else {
-					cout << YELLOW;
-					cout << user_word[i] << " ";
-					cout << RESET;
-
-					flag = 1;
-				}
-			}
-
-
-
-
-
-		}
-
-
-		if (flag == 1) {
-			flag = flag - 1; //обнуляем flag, чтобы когда мы проверяли некст букву, flag не был равен одному
-		}
-
-		else if (flag == 0) {
+		int flag = 1;
+		if (user_word[i] == word[i])
+		{
+			cout << GREEN;
 			cout << user_word[i] << " ";
-
-
+			cout << RESET;
+			count++;
+			continue;
 		}
-
-
+		for (int g = 0; g < 5; g++) {
+			if (user_word[i] == word[g] && i != g)
+			{
+				cout << YELLOW;
+				cout << user_word[i] << " ";
+				cout << RESET;
+				flag = 0;
+			}
+			break;
+		}
 	}
-	cout << endl;
+	if (flag)
+	{
+		cout << user_word[i] << " ";
+	}
+}
 
-	return count;
+cout << endl;
+
+return count;
 }
 
 
 int main() {
 	gamemenu();
 
-	string word = "PLANE";
+	string word = randomWords();
 
 	cout << "Write your first guess (only 5 letters) " << endl;
 
@@ -170,18 +164,86 @@ int main() {
 
 		transform(user_word.begin(), user_word.end(), user_word.begin(), toupper);
 
-		if (check_words(user_word, word) == 5 && i < 4) {
+		if (check_words(user_word, word) == 5 && i < mode_count) {
 			cout << endl;
 
 			cout << "YOU  WIN!" << endl;
 
-			break;
-		}
+			string want;
 
-		else if (i == 4) {
+			cout << endl;
 			cout << endl;
 
+			cout << "Do you want to " << RED << "play again ?" << RESET << endl;
+			cout << endl;
+
+			cout << "Y/N" << endl;
+
+			cout << endl;
+
+			cin >> want;
+
+			if (want == "Y" || want == "y") {
+				cout << system("cls");
+				cout << CLEAR_LINE;
+
+				main();
+			}
+
+			else if (want == "N" || want == "n") {
+				cout << system("cls");
+				cout << CLEAR_LINE;
+
+
+				exit(0);
+			}
+
+			else {
+				cout << "Your input was invalid";
+			}
+		}
+
+		else if (i == mode_count - 1) {
+
+			cout << endl;
+
+			cout << "THE WORD WAS " << RED << word << RESET << endl;
 			cout << "YOU  LOST!" << endl;
+
+			string want;
+
+			cout << endl;
+			cout << endl;
+
+			cout << "Do you want to " << RED << "play again ?" << RESET << endl;
+			cout << endl;
+
+			cout << "Y/N" << endl;
+
+			cout << endl;
+
+			cin >> want;
+
+			if (want == "Y" || want == "y") {
+				cout << system("cls");
+				cout << CLEAR_LINE;
+
+				main();
+			}
+
+			else if (want == "N" || want == "n") {
+				cout << system("cls");
+				cout << CLEAR_LINE;
+
+
+				exit(0);
+			}
+
+			else {
+				cout << "Your input was invalid";
+			}
+
+
 		}
 
 		
