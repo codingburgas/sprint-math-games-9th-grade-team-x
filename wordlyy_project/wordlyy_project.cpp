@@ -150,9 +150,16 @@ void Secondgamemenu() {
 		cout << setw(113) << "|              |  |              |  |              |  |              |  |              |  |              |" << endl;
 		cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
 		cout << endl;
+		cout << endl;
 
-		cout << setw(64) << "About us" << endl;
+		cout << setw(87) << "We are team X. We are a group of students learning C++" << endl;
+		cout << setw(84) << "and we decided to recreate a game named Wordle." << endl;
+		cout << setw(89) << "Our team consists of four people - a Front-End Developer," << endl;
+		cout << setw(86) << "Back-End Developer, a Designer and a Scrum Trainer." << endl;
+		cout << setw(77) << "We hope you enjoy our little game!" << endl;
 
+		cout << endl;
+		cout << endl;
 		cout << endl;
 
 		cout << setw(75) << "Press [1] to return to the menu" << endl;
