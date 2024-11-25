@@ -127,7 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="checkwords.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gamemenu.cpp" />
+    <ClCompile Include="icon.cpp" />
+    <ClCompile Include="modedecide.cpp" />
+    <ClCompile Include="utils.cpp" />
     <ClCompile Include="wordlyy_project.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="checkwords.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gamemenu.h" />
+    <ClInclude Include="icon.h" />
+    <ClInclude Include="modedecide.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
