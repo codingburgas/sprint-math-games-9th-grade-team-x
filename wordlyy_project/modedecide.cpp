@@ -11,8 +11,6 @@ using namespace std;
 
 void modedecide(int modeDecide, int modeCount, string word) {
 
-	//gamemenu(modeDecide, modeCount, word); // call the function that contains the main menu
-
 	icon();
 
 	cout << endl;

@@ -7,9 +7,13 @@
 using namespace std;
 
 void gamemenu(int modeDecide, int modeCount, string word) {
-	int menuDecider; // variable for navigating through the menu
+	// Create a variable for navigating through the menu
+	int menuDecider; 
 
-	int backMenu; // second variable for navigating through the menu
+	// Create a second variable for navigating through the menu
+	int backMenu;
+
+	//Create third variable for navigating through the menu
 	int aboutUs;
 
 	icon();
@@ -51,6 +55,7 @@ void gamemenu(int modeDecide, int modeCount, string word) {
 	cout << setw(60) << " ";
 	cin >> menuDecider;
 
+	// Completely clear the console
 	cout << system("cls"); // completely clears the console
 
 	cout << CLEARLINE;

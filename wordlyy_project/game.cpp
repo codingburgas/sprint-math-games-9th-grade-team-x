@@ -113,16 +113,17 @@ for (int i = 0; i < modeCount; i++) {
 
 	cout << endl;
 	cout << "                                                        ";
-	transform(userWord.begin(), userWord.end(), userWord.begin(), toupper); // the first two arguments specify the range in which the letters should be changed, 
-	// and the last argument specifies where to start storing the transformed elements
+		//Specify the first two arguments to define the range in which the letters should be changed, 
+		//and the last argument to specify where to start storing the transformed elements.
 
-	// transform applies the given function to the range and stores the result in another range, 
-   // preserving the original order of elements and starting from user_word.begin()
+		// Apply `transform` to the range, using the given function, and store the result in another range. 
+		// Preserve the original order of elements, starting from `user_word.begin()`.
+
+	transform(userWord.begin(), userWord.end(), userWord.begin(), toupper); 
 
 
-
-	if (checkWords(userWord, word) == 5 && i < modeCount) { // if the user has typed 5 correct letters (green letters in the right positions) 
-		// and hasn't used all their attempts, they win
+	// If the user has typed 5 correct letters (green letters in the right positions) and hasn't used all their attempts, they win.
+	if (checkWords(userWord, word) == 5 && i < modeCount) {
 
 		cout << endl;
 		cout << endl;
@@ -197,7 +198,9 @@ for (int i = 0; i < modeCount; i++) {
 		}
 	}
 
-	else if (i == modeCount - 1) { // if i = modeCount - 1, the user loses (i starts from zero, so we need to subtract 1)
+
+	// If `i == modeCount - 1`, the user loses (since `i` starts from zero, we need to subtract 1)
+	else if (i == modeCount - 1) {
 
 		cout << endl;
 		cout << endl;
@@ -228,6 +231,7 @@ for (int i = 0; i < modeCount; i++) {
 			cout << system("cls");
 			cout << CLEARLINE;
 
+			//Call gamemenu to start the ame from the beginning
 			gamemenu(modeDecide, modeCount, word);
 			break;
 		}

@@ -1,6 +1,8 @@
 ﻿#include <iostream> 
 #include <string>
+//Change the appearance of the text
 #include <algorithm>
+//Define the functions that manipulate the format of the input and output of the program
 #include <iomanip>
 #include "utils.h"
 #include "icon.h"
@@ -13,15 +15,14 @@ using namespace std;
 
 
 int main() {
-	int modeDecide = 0; // level selection
-	int modeCount = 5; // number of attempts (by default, there are five attempts)
+	// Select the level
+	int modeDecide = 0;
+	// Set the number of attempts (by default, there are five attempts)
+	int modeCount = 5; 
 
-	string word = randomWords(); // the variable word takes a value from another function as a random word
+	// Make the variable `word` take a value from another function as a random word
+	string word = randomWords();
 
-
+	// Call the function gamemenu
 	gamemenu(modeDecide, modeCount, word);
-
-
-	//game(modeDecide, modeCount, word);
-	
 }
