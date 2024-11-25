@@ -17,7 +17,7 @@ string randomWords() {
 	int num = rand() % 20; // the variable num takes a random word from the ones we specified // rand() - a function that returns a random number
 
 
-	string array[20] = { "BRAIN" , "BRICK" , "TABLE" , "PLANT" , "BEACH" , "BROWN" , "HOUSE" , "SNAKE" , "OCEAN" , "MUSIC" , "DREAM" , "SUGAR" ,"LIGHT" , "PARTY" , "BREAD" , "SHINE" , "WATER" , "LEMON" , "CLOCK" , "TRAIN" };
+	string array[20] = { "BRAIN" , "BRICK" , "TABLE" , "PLANT" , "BEACH" , "BROWN" , "HOUSE" , "SNAKE" , "OCEAN" , "MUSIC" , "DREAM" , "SUGAR" ,"LIGHT" , "PARTY" , "BREAD" , "SHINE" , "WATER" , "LEMON" , "HUMID" , "TRAIN" };
 
 	return array[num]; // returns the index where the word (random) is located
 }
@@ -72,6 +72,9 @@ void Secondgamemenu() {
 	cout << setw(73) << "                 |________|" << endl;
 
 
+	cout << endl;
+	cout << endl;
+	cout << setw(60) << " ";
 	cin >> menuDecider;
 
 	cout << system("cls"); // completely clears the console
@@ -96,6 +99,7 @@ void Secondgamemenu() {
 		cout << setw(113) << "|              |  |              |  |              |  |              |  |              |  |              |" << endl;
 		cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
 		cout << endl;
+		cout << endl;
 
 		cout << setw(75) << "- Your word must be 5 letters." << endl;
 		cout << setw(88) << "- Each difficulty gives you a different amount of attempts." << endl;
@@ -118,6 +122,9 @@ void Secondgamemenu() {
 		cout << setw(74) << "Press [2] to continue playing" << endl;
 		cout << endl;
 
+
+		cout << endl;
+		cout << setw(60) << " ";
 		cin >> backMenu;
 		cout << system("cls");
 		cout << CLEARLINE;
@@ -168,6 +175,9 @@ void Secondgamemenu() {
 		cout << setw(74) << "Press [2] to continue playing" << endl;
 		cout << endl;
 
+
+		cout << endl;
+		cout << setw(60) << " ";
 		cin >> aboutUs;
 		cout << system("cls");
 		cout << CLEARLINE;
@@ -199,8 +209,7 @@ int check_words(string user_word, string word) {
 	int count = 0;
 	for (int i = 0; i < 5; i++) {
 		int flag = 1;
-		if (user_word[i] == word[i])
-		{
+		if (user_word[i] == word[i]) {
 			cout << GREEN;
 			cout << user_word[i] << " ";
 			cout << RESET;
@@ -208,18 +217,15 @@ int check_words(string user_word, string word) {
 			continue;
 		}
 		for (int g = 0; g < 5; g++) {
-			if (user_word[i] == word[g] && i != g)
-			{
+			if (user_word[i] == word[g] && i != g) {
 				cout << YELLOW;
 				cout << user_word[i] << " ";
 				cout << RESET;
 				flag = 0;
 			}
-			break;
 		}
 
-		if (flag)
-		{
+		if (flag == 1) {
 			cout << user_word[i] << " ";
 		}
 	}
@@ -267,7 +273,8 @@ int main() {
 
 
 
-
+	cout << endl;
+	cout << setw(60) << " ";
 	cin >> modeDecide;
 
 
@@ -334,14 +341,10 @@ int main() {
 		cout << setw(42) << "Press [" << YELLOW << "2" << RESET << setw(30) << "] if you want to start with medium level" << endl;
 		cout << setw(43) << "Press [" << RED << "3" << RESET << setw(30) << "] if you want to start with hard level" << endl;
 
-		cout << endl;
-		cout << endl;
-		cout << endl;
-		cout << setw(81) << "Press [4] if you want to return to the menu" << endl;
-		cout << setw(73) << "Press [5] to exit the game" << endl;
 
 
-
+		cout << endl;
+		cout << setw(60) << " ";
 		cin >> modeDecide;
 
 
@@ -385,8 +388,10 @@ int main() {
 	cout << setw(113) << "|              |  |              |  |              |  |              |  |              |  |              |" << endl;
 	cout << setw(113) << "'--------------'  '--------------'  '--------------'  '--------------'  '--------------'  '--------------'" << endl;
 	cout << endl;
+	cout << endl;
 
 	cout << setw(79) << "Write your first guess (only 5 letters) " << endl;
+	cout << endl;
 
 
 
@@ -397,7 +402,8 @@ int main() {
 	for (int i = 0; i < modeCount; i++) {
 
 
-
+		cout << endl;
+		cout << "                                                        ";
 		cin >> userWord;
 
 
@@ -414,7 +420,8 @@ int main() {
 			break; // use break to stop the program from running
 		}
 
-
+		cout << endl;
+		cout << "                                                      ";
 		transform(userWord.begin(), userWord.end(), userWord.begin(), toupper); // the first two arguments specify the range in which the letters should be changed, 
 		// and the last argument specifies where to start storing the transformed elements
 
@@ -422,24 +429,29 @@ int main() {
 	   // preserving the original order of elements and starting from user_word.begin()
 
 
+
 		if (check_words(userWord, word) == 5 && i < modeCount) { // if the user has typed 5 correct letters (green letters in the right positions) 
 			// and hasn't used all their attempts, they win
+
+			cout << endl; 
 			cout << endl;
 
-			cout << "YOU  WIN!" << endl;
+			cout << setw(63) << "YOU  WIN!" << endl;
 
 			string want;
 
 			cout << endl;
 			cout << endl;
 
-			cout << "Do you want to play again ?" << endl;
+			cout << setw(73) << "Do you want to play again ?" << endl;
 			cout << endl;
 
-			cout << "Y/N" << endl;
+			cout << setw(61) << "Y/N" << endl;
 
 			cout << endl;
 
+			cout << endl;
+			cout << setw(60) << " ";
 			cin >> want;
 
 			if (want == "Y" || want == "y") {
@@ -458,7 +470,7 @@ int main() {
 			}
 
 			else {
-				cout << "Your input was invalid";
+				cout << setw(70) << "Your input was invalid";
 			}
 		}
 
@@ -466,21 +478,23 @@ int main() {
 
 			cout << endl;
 
-			cout << "THE WORD WAS " << RED << word << RESET << endl;
-			cout << "YOU  LOST!" << endl;
+			cout << setw(70) << "THE WORD WAS " << RED << word << RESET << endl;
+			cout << setw(64) << "YOU  LOST!" << endl;
 
 			string want;
 
 			cout << endl;
 			cout << endl;
 
-			cout << "Do you want to play again ?" << endl;
+			cout << setw(75) << "Do you want to play again ?" << endl;
 			cout << endl;
 
-			cout << "Y/N" << endl;
+			cout << setw(59) << "Y/N" << endl;
 
 			cout << endl;
 
+			cout << endl;
+			cout << setw(60) << " ";
 			cin >> want;
 
 			if (want == "Y" || want == "y") {
