@@ -214,6 +214,7 @@ for (int i = 0; i < modeCount; i++) {
 			cout << system("cls");
 			cout << CLEARLINE;
 
+			gamemenu(modeDecide, modeCount, word);
 			break;
 		}
 
