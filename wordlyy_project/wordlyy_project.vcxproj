@@ -131,6 +131,7 @@
     <ClCompile Include="game.cpp" />
     <ClCompile Include="gamemenu.cpp" />
     <ClCompile Include="icon.cpp" />
+    <ClCompile Include="invalidInputCheck.cpp" />
     <ClCompile Include="modedecide.cpp" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="wordlyy_project.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="gamemenu.h" />
     <ClInclude Include="icon.h" />
+    <ClInclude Include="invalidInputCheck.h" />
     <ClInclude Include="modedecide.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>

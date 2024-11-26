@@ -19,9 +19,9 @@ int main() {
 	int modeDecide = 0;
 	// Set the number of attempts (by default, there are five attempts)
 	int modeCount = 5; 
-
 	// Make the variable `word` take a value from another function as a random word
 	string word = randomWords();
+
 
 	// Call the function gamemenu
 	gamemenu(modeDecide, modeCount, word);

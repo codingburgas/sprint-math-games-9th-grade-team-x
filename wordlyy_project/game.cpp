@@ -16,7 +16,6 @@ void game(int modeDecide, int modeCount, string word){
 	string want;
 	string userWord;
 
-
 icon();
 cout << endl;
 cout << endl;
@@ -39,7 +38,6 @@ for (int i = 0; i < modeCount; i++) {
 
 
 	cout << CLEARLINE;
-
 
 
 	if (userWord.size() != 5) {
@@ -107,7 +105,73 @@ for (int i = 0; i < modeCount; i++) {
 			cout << endl;
 
 		}
-	} 
+	}
+	if (userWord.size() != 5) {
+		cout << endl;
+
+		cout << setw(52) << RED << "YOUR WORD MUST BE 5 LETTERS!" << RESET << endl;
+		cout << endl;
+		cout << setw(69) << "Go back to menu?" << endl;
+
+		cout << setw(62) << "Y/N" << endl;
+
+		cout << endl;
+
+		cout << endl;
+		cout << setw(60) << " ";
+		cin >> want;
+
+		if (want == "Y" || want == "y") {
+			cout << system("cls");
+			cout << CLEARLINE;
+
+			gamemenu(modeDecide, modeCount, word);
+			break;
+		}
+
+
+		if (want == "N" || want == "n") {
+			cout << system("cls");
+			cout << CLEARLINE;
+
+
+			exit(0);
+		}
+
+		else {
+			cout << system("cls");
+			cout << CLEARLINE;
+
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+
+			cout << setw(63) << "Your input was " << RED << "invalid" << RESET << endl;
+
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+			cout << endl;
+
+		}
+	}
 
 	
 

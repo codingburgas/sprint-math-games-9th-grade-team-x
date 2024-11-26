@@ -73,10 +73,8 @@ void modedecide(int modeDecide, int modeCount, string word) {
 
 
 	default:
-		cout << endl;
-
-		cout << "Something went wrong, but you can start with medium" << endl;
-
+		game(modeDecide, modeCount, word);
+		break;
 	}
 
 	/*if (modeDecide == 4) {
